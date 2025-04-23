@@ -1,49 +1,31 @@
-## About Laravel Movie DB
+# Movie Laravel
 
-Ini adalah sistem database movie menggunakan laravel untuk mata kuliah Konstruksi dan Evolusi Perangkat Lunak Prodi Teknologi Rekayasa Perangkat Lunak Jurusan Teknologi Informasi Politeknik Negeri Padang.
+Proyek ini adalah aplikasi berbasis Laravel yang berfungsi untuk mengelola data film. Aplikasi ini menyediakan fitur CRUD (Create, Read, Update, Delete) untuk model Movie, serta fitur pencarian berdasarkan kriteria tertentu.
 
-Silahkan clone repository ini ke PC Anda.
-Jika Anda baru saja meng-clone repository proyek Laravel dan ingin menjalankan perintah migrasi, ada beberapa langkah yang perlu Anda lakukan terlebih dahulu. Berikut adalah langkah-langkahnya:
+## Fitur
 
-1. **Composer Install:**
-   Pastikan Anda telah menginstal Composer di sistem Anda. Kemudian, jalankan perintah berikut di terminal di direktori proyek Laravel Anda untuk menginstal dependensi:
+- **CRUD Movie**: Pengguna dapat menambah, mengedit, dan menghapus data film.
+- **Pencarian Movie**: Pengguna dapat mencari film berdasarkan judul, genre, atau tahun rilis.
 
-    composer install
+## Pembaruan Terkini
 
-2. **Environment File:**
-   Duplikat file `.env.example` menjadi `.env` di direktori proyek Anda. Sesuaikan pengaturan database dan konfigurasi lainnya di file `.env` sesuai dengan kebutuhan Anda.
+- **Refactor Fungsi `edit` dan `store`**: Fungsi untuk mengedit dan menyimpan data film telah diperbarui untuk meningkatkan efisiensi dan pengelolaan validasi. Perubahan ini bertujuan untuk memperbaiki alur logika dan mempermudah pengelolaan kode.
+  
+- **Penambahan Helper**: Sebuah helper baru telah ditambahkan untuk memudahkan penggunaan fungsi yang sering digunakan, seperti manipulasi data dan pengecekan validasi. Helper ini diharapkan dapat mengurangi duplikasi kode dan meningkatkan keterbacaan.
 
-    cp .env.example .env
+## Persyaratan Sistem
 
-3. **Generate Application Key:**
-   Laravel menggunakan kunci aplikasi untuk enkripsi data. Jalankan perintah berikut untuk menghasilkan kunci aplikasi:
+- PHP >= 7.4
+- Laravel >= 8.x
+- Composer
+- MySQL atau database lain yang kompatibel dengan Laravel
 
-    php artisan key:generate
+## Instalasi
 
-4. **Set Database Connection:**
-   Pastikan bahwa pengaturan koneksi database di file `.env` sesuai dengan konfigurasi database Anda.
+Ikuti langkah-langkah berikut untuk menjalankan aplikasi ini di lingkungan lokal:
 
-   Contoh: Jika Anda membuat database dbmovie, maka di file `.env` ubahlah `DB_DATABASE=laravel` menjadi `DB_DATABASE=dbmovie`
+### 1. Clone Repository
 
-6. **Run Migrations:**
-   Sekarang Anda dapat menjalankan perintah migrasi untuk membuat tabel-tabel database:
-
-    php artisan migrate
-
-    Perintah ini akan mengeksekusi semua migrasi yang terkandung di proyek Laravel ini.
-
-7. **Run Seeds (Opsional):**
-   Proyek ini menggunakan _seeding_ untuk mengisi basis data awal, jalankan perintah berikut:
-
-    php artisan db:seed
-
-    Perintah ini akan menjalankan seeder yang telah didefinisikan.
-
-8. **Serve Aplikasi:**
-   Setelah langkah-langkah di atas selesai, Anda dapat menjalankan server pengembangan Laravel untuk melihat proyek Anda:
-
-    php artisan serve
-
-    Aplikasi akan berjalan di http://localhost:8000 secara default.
-
-_Credit by: Yori Adi Atma_
+Clone repository ini ke mesin lokal Anda:
+```bash
+git clone https://github.com/awanbadut/movie-laravel.git
